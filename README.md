@@ -1,13 +1,13 @@
 # Kneeview
 
-An interactive web-based 3D viewer for patient-specific knee bone geometries, providing open access to a comprehensive dataset of 81 segmented knee MRI scans for finite element modeling and biomechanical research.
+An interactive web-based 3D viewer for patient-specific knee bone geometries, providing open access to a comprehensive dataset of 80 segmented knee MRI scans for finite element modeling and biomechanical research.
 
 ## Overview
 
 Finite element modeling is pivotal for understanding knee biomechanics, but its potential is often constrained by data availability. While the Osteoarthritis Initiative (OAI) provides invaluable imaging data, researchers still face the bottleneck of converting these images into usable simulations. Existing benchmarks like OpenKnee are valuable, but restricted by unstructured meshes and low subject count (n=8).
 
 **Kneeview** addresses this gap by providing:
-- **81 patient-specific bone geometries** (.stl files) of the Femur, Tibia, Patella, and Fibula
+- **80 patient-specific bone geometries** (.stl files) of the Femur, Tibia, Patella, and Fibula
 - **Interactive 3D visualization** directly in the browser
 - **High-quality automated segmentation** with validated accuracy metrics
 - **Future expansion** to include structured Abaqus meshes with topological consistency
@@ -15,10 +15,9 @@ Finite element modeling is pivotal for understanding knee biomechanics, but its 
 ## Dataset Details
 
 ### Data Source
-- **93 T2 fat-saturated knee MRI scans** from Hospital Del Mar, Barcelona (2017-2024)
-- **38 male, 55 female patients**
-- Final repository: **81 subjects** (after excluding subjects with missing demographics)
-- **324 STL files** (4 bones per patient)
+- **80 T2 fat-saturated knee MRI scans** from Hospital Del Mar, Barcelona (2017-2024)
+- Final repository: **80 subjects**
+- **320 STL files** (4 bones per patient)
 
 ### Segmentation Pipeline
 - **nnUNet deep learning model** trained on 35 expert annotations
@@ -28,11 +27,17 @@ Finite element modeling is pivotal for understanding knee biomechanics, but its 
 
 ### Validation Metrics
 Performance on hold-out test dataset (15 volumes):
-- **Dice Coefficient**: 0.986 ± 0.001
-- **Intersection over Union (IOU)**: 0.971 ± 0.002
-- **Hausdorff Distance (HD95)**: 14.464 ± 12.727
-  - Femur, Patella, Fibula: HD95 = 1.46 ± 0.242
-  - Tibia: HD95 = 16.49 ± 14.22 (variance from distal artifacts)
+
+**Overall Metrics:**
+- **DICE**: 0.9855 ± 0.0010
+- **IOU**: 0.9713 ± 0.0020
+- **HD95**: 14.4637 ± 12.7269
+
+**Per-Class Metrics:**
+- **Femur**: DICE 0.9896 ± 0.0011, IOU 0.9794 ± 0.0022, HD95 1.2259 ± 0.0833
+- **Tibia**: DICE 0.9836 ± 0.0018, IOU 0.9678 ± 0.0034, HD95 16.4872 ± 14.2195
+- **Patella**: DICE 0.9693 ± 0.0019, IOU 0.9405 ± 0.0035, HD95 2.1452 ± 0.1190
+- **Fibula**: DICE 0.9629 ± 0.0030, IOU 0.9287 ± 0.0055, HD95 2.2268 ± 0.6385
 
 ## Features
 
@@ -43,14 +48,14 @@ Performance on hold-out test dataset (15 volumes):
   - Tibia (Blue)
   - Fibula (Green)
   - Patella (Orange)
-- **Patient Selection**: Browse through 81 different patient geometries
+- **Patient Selection**: Browse through 80 different patient geometries
 - **Download Access**: Direct access to STL files for research use
 
 ## Usage
 
 ### Viewing Models Online
 Visit the live viewer at your deployment URL and:
-1. Select a patient ID (K001-K081)
+1. Select a patient ID (K001-K080)
 2. Interact with the 3D model using mouse controls
 3. Apply various rendering and visualization filters
 
@@ -62,7 +67,7 @@ Visit the live viewer at your deployment URL and:
 ## Roadmap
 
 Future developments include:
-- **Structured FEM meshes** for all 81 subjects
+- **Structured FEM meshes** for all 80 subjects
 - **Bayesian Coherent Point Drift morphing** for topology-consistent meshes
 - **Soft tissue templates** with bone-specific morphing and interpolation
 - **Population-level analysis tools**

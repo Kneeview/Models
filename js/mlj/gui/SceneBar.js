@@ -96,7 +96,7 @@
 
             git.onClick(function () {
                 var win = window.open(
-                    "https://github.com/SpineView1/ivd",
+                    "https://github.com/Kneeview/Models",
                     "_blank"
                 );
                 win.focus();

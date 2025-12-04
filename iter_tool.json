@@ -4,7 +4,7 @@
     "title": "IVD Viewer",
     "short_description": "Interactive viewer for patient-specific spine models",
     "long_description": "The IVD Viewer is an interactive tool designed to visualize 169 patient-specific spine models generated through mesh morphing techniques.",
-    "url": "https://github.com/SpineView1/ivd",
+    "url": "https://github.com/Kneeview/Models",
     "publication": "",
     "owner": {
       "author": "SpineView Team",

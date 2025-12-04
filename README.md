@@ -100,11 +100,7 @@ See the Contributions section in the web interface for detailed contributor info
 2. ICREA, Barcelona, Spain
 3. Department of Radiology, Hospital Del Mar, Barcelona, Spain
 
-<p align="center">
-  <img src="LogoBMMB.png" alt="BMMB Logo" height="80"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="bcnmedtech.png" alt="BCN MedTech Logo" height="80"/>
-</p>
+![BMMB Logo](LogoBMMB.png) ![BCN MedTech Logo](bcnmedtech.png)
 
 ## Technology Stack
 

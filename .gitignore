@@ -1,0 +1,25 @@
+# STL model files
+*.stl
+old_spine_models/
+backup_knee_models/
+STL_per_patient_renumbered/
+
+# Excel data files
+*.xlsx
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

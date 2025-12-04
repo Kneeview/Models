@@ -1,0 +1,802 @@
+[
+  {
+    "K NR": 1,
+    "Age": 72,
+    "Sex": "M",
+    "Height": 175,
+    "Weight (kg)": 80.0,
+    "BMI": 26.12,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 3,
+    "Age": 64,
+    "Sex": "M",
+    "Height": 174,
+    "Weight (kg)": 89.0,
+    "BMI": 29.4,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 4,
+    "Age": 72,
+    "Sex": "F",
+    "Height": 148,
+    "Weight (kg)": 55.0,
+    "BMI": 25.11,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 5,
+    "Age": 70,
+    "Sex": "F",
+    "Height": 148,
+    "Weight (kg)": 65.0,
+    "BMI": 29.67,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 7,
+    "Age": 61,
+    "Sex": "F",
+    "Height": 162,
+    "Weight (kg)": 65.0,
+    "BMI": 24.77,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 8,
+    "Age": 64,
+    "Sex": "M",
+    "Height": 177,
+    "Weight (kg)": 65.0,
+    "BMI": 20.75,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 9,
+    "Age": 66,
+    "Sex": "F",
+    "Height": 166,
+    "Weight (kg)": 82.0,
+    "BMI": 29.76,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 10,
+    "Age": 63,
+    "Sex": "F",
+    "Height": 154,
+    "Weight (kg)": 53.0,
+    "BMI": 22.35,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 11,
+    "Age": 73,
+    "Sex": "M",
+    "Height": 166,
+    "Weight (kg)": 84.0,
+    "BMI": 30.48,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 12,
+    "Age": 73,
+    "Sex": "M",
+    "Height": 166,
+    "Weight (kg)": 84.0,
+    "BMI": 30.48,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 13,
+    "Age": 70,
+    "Sex": "M",
+    "Height": 190,
+    "Weight (kg)": 77.0,
+    "BMI": 21.33,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 14,
+    "Age": 67,
+    "Sex": "F",
+    "Height": 170,
+    "Weight (kg)": 102.0,
+    "BMI": 35.29,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 15,
+    "Age": 74,
+    "Sex": "F",
+    "Height": 163,
+    "Weight (kg)": 71.0,
+    "BMI": 26.72,
+    "Left/Right": "L",
+    "KL-score": 2
+  },
+  {
+    "K NR": 17,
+    "Age": 76,
+    "Sex": "F",
+    "Height": 155,
+    "Weight (kg)": 71.0,
+    "BMI": 29.55,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 18,
+    "Age": 67,
+    "Sex": "F",
+    "Height": 162,
+    "Weight (kg)": 78.0,
+    "BMI": 29.72,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 19,
+    "Age": 72,
+    "Sex": "F",
+    "Height": 161,
+    "Weight (kg)": 82.0,
+    "BMI": 31.63,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 21,
+    "Age": 73,
+    "Sex": "M",
+    "Height": 164,
+    "Weight (kg)": 77.0,
+    "BMI": 28.63,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 22,
+    "Age": 75,
+    "Sex": "F",
+    "Height": 163,
+    "Weight (kg)": 64.0,
+    "BMI": 24.09,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 23,
+    "Age": 64,
+    "Sex": "M",
+    "Height": 181,
+    "Weight (kg)": 95.0,
+    "BMI": 29.0,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 24,
+    "Age": 69,
+    "Sex": "M",
+    "Height": 186,
+    "Weight (kg)": 91.0,
+    "BMI": 26.3,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 25,
+    "Age": 73,
+    "Sex": "M",
+    "Height": 165,
+    "Weight (kg)": 100.0,
+    "BMI": 36.73,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 26,
+    "Age": 72,
+    "Sex": "F",
+    "Height": 157,
+    "Weight (kg)": 83.0,
+    "BMI": 33.67,
+    "Left/Right": "R",
+    "KL-score": 4
+  },
+  {
+    "K NR": 27,
+    "Age": 70,
+    "Sex": "F",
+    "Height": 158,
+    "Weight (kg)": 70.0,
+    "BMI": 28.04,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 28,
+    "Age": 69,
+    "Sex": "F",
+    "Height": 159,
+    "Weight (kg)": 81.0,
+    "BMI": 32.04,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 30,
+    "Age": 71,
+    "Sex": "F",
+    "Height": 175,
+    "Weight (kg)": 79.0,
+    "BMI": 25.8,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 31,
+    "Age": 68,
+    "Sex": "F",
+    "Height": 155,
+    "Weight (kg)": 73.0,
+    "BMI": 30.39,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 33,
+    "Age": 67,
+    "Sex": "F",
+    "Height": 150,
+    "Weight (kg)": 66.0,
+    "BMI": 29.33,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 34,
+    "Age": 63,
+    "Sex": "M",
+    "Height": 166,
+    "Weight (kg)": 89.0,
+    "BMI": 32.3,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 35,
+    "Age": 69,
+    "Sex": "F",
+    "Height": 169,
+    "Weight (kg)": 96.0,
+    "BMI": 33.61,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 36,
+    "Age": 69,
+    "Sex": "F",
+    "Height": 152,
+    "Weight (kg)": 85.0,
+    "BMI": 36.79,
+    "Left/Right": "L",
+    "KL-score": 2
+  },
+  {
+    "K NR": 37,
+    "Age": 72,
+    "Sex": "M",
+    "Height": 179,
+    "Weight (kg)": 94.0,
+    "BMI": 29.34,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 38,
+    "Age": 68,
+    "Sex": "F",
+    "Height": 157,
+    "Weight (kg)": 75.0,
+    "BMI": 30.43,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 39,
+    "Age": 61,
+    "Sex": "F",
+    "Height": 159,
+    "Weight (kg)": 74.0,
+    "BMI": 29.27,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 40,
+    "Age": 61,
+    "Sex": "F",
+    "Height": 159,
+    "Weight (kg)": 74.0,
+    "BMI": 29.27,
+    "Left/Right": "L",
+    "KL-score": 2
+  },
+  {
+    "K NR": 41,
+    "Age": 63,
+    "Sex": "M",
+    "Height": 172,
+    "Weight (kg)": 105.0,
+    "BMI": 35.49,
+    "Left/Right": "L",
+    "KL-score": 2
+  },
+  {
+    "K NR": 42,
+    "Age": 74,
+    "Sex": "F",
+    "Height": 158,
+    "Weight (kg)": 73.4,
+    "BMI": 29.4,
+    "Left/Right": "L",
+    "KL-score": 2
+  },
+  {
+    "K NR": 43,
+    "Age": 74,
+    "Sex": "F",
+    "Height": 158,
+    "Weight (kg)": 73.4,
+    "BMI": 29.4,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 45,
+    "Age": 60,
+    "Sex": "F",
+    "Height": 157,
+    "Weight (kg)": 70.0,
+    "BMI": 28.4,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 46,
+    "Age": 73,
+    "Sex": "F",
+    "Height": 150,
+    "Weight (kg)": 78.0,
+    "BMI": 34.67,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 47,
+    "Age": 72,
+    "Sex": "M",
+    "Height": 169,
+    "Weight (kg)": 81.0,
+    "BMI": 28.36,
+    "Left/Right": "L",
+    "KL-score": 2
+  },
+  {
+    "K NR": 48,
+    "Age": 64,
+    "Sex": "M",
+    "Height": 174,
+    "Weight (kg)": 108.0,
+    "BMI": 35.67,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 49,
+    "Age": 70,
+    "Sex": "M",
+    "Height": 176,
+    "Weight (kg)": 103.0,
+    "BMI": 33.25,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 50,
+    "Age": 63,
+    "Sex": "F",
+    "Height": 163,
+    "Weight (kg)": 67.0,
+    "BMI": 25.22,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 51,
+    "Age": 62,
+    "Sex": "F",
+    "Height": 164,
+    "Weight (kg)": 80.0,
+    "BMI": 29.74,
+    "Left/Right": "R",
+    "KL-score": 1
+  },
+  {
+    "K NR": 52,
+    "Age": 67,
+    "Sex": "F",
+    "Height": 158,
+    "Weight (kg)": 99.0,
+    "BMI": 39.66,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 53,
+    "Age": 73,
+    "Sex": "M",
+    "Height": 172,
+    "Weight (kg)": 78.0,
+    "BMI": 26.37,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 55,
+    "Age": 64,
+    "Sex": "F",
+    "Height": 160,
+    "Weight (kg)": 68.0,
+    "BMI": 26.56,
+    "Left/Right": "L",
+    "KL-score": 0
+  },
+  {
+    "K NR": 56,
+    "Age": 61,
+    "Sex": "M",
+    "Height": 187,
+    "Weight (kg)": 106.0,
+    "BMI": 30.31,
+    "Left/Right": "L",
+    "KL-score": 2
+  },
+  {
+    "K NR": 57,
+    "Age": 69,
+    "Sex": "M",
+    "Height": 172,
+    "Weight (kg)": 100.0,
+    "BMI": 33.8,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 58,
+    "Age": 72,
+    "Sex": "F",
+    "Height": 152,
+    "Weight (kg)": 64.0,
+    "BMI": 27.7,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 59,
+    "Age": 60,
+    "Sex": "F",
+    "Height": 152,
+    "Weight (kg)": 77.0,
+    "BMI": 33.33,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 60,
+    "Age": 71,
+    "Sex": "M",
+    "Height": 167,
+    "Weight (kg)": 103.0,
+    "BMI": 36.93,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 61,
+    "Age": 68,
+    "Sex": "F",
+    "Height": 158,
+    "Weight (kg)": 59.0,
+    "BMI": 23.63,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 62,
+    "Age": 74,
+    "Sex": "M",
+    "Height": 175,
+    "Weight (kg)": 85.0,
+    "BMI": 27.76,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 63,
+    "Age": 74,
+    "Sex": "M",
+    "Height": 175,
+    "Weight (kg)": 85.0,
+    "BMI": 27.76,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 64,
+    "Age": 57,
+    "Sex": "F",
+    "Height": 158,
+    "Weight (kg)": 67.3,
+    "BMI": 26.96,
+    "Left/Right": "L",
+    "KL-score": 2
+  },
+  {
+    "K NR": 69,
+    "Age": 62,
+    "Sex": "F",
+    "Height": 157,
+    "Weight (kg)": 74.0,
+    "BMI": 30.02,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 70,
+    "Age": 64,
+    "Sex": "F",
+    "Height": 168,
+    "Weight (kg)": 66.0,
+    "BMI": 23.38,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 71,
+    "Age": 68,
+    "Sex": "M",
+    "Height": 169,
+    "Weight (kg)": 102.5,
+    "BMI": 35.89,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 72,
+    "Age": 71,
+    "Sex": "M",
+    "Height": 186,
+    "Weight (kg)": 108.5,
+    "BMI": 31.36,
+    "Left/Right": "L",
+    "KL-score": 2
+  },
+  {
+    "K NR": 73,
+    "Age": 61,
+    "Sex": "M",
+    "Height": 156,
+    "Weight (kg)": 123.0,
+    "BMI": 50.54,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 74,
+    "Age": 64,
+    "Sex": "F",
+    "Height": 154,
+    "Weight (kg)": 76.5,
+    "BMI": 32.26,
+    "Left/Right": "L",
+    "KL-score": 0
+  },
+  {
+    "K NR": 75,
+    "Age": 71,
+    "Sex": "M",
+    "Height": 162,
+    "Weight (kg)": 79.5,
+    "BMI": 30.29,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 76,
+    "Age": 74,
+    "Sex": "M",
+    "Height": 180,
+    "Weight (kg)": 99.0,
+    "BMI": 30.56,
+    "Left/Right": "L",
+    "KL-score": 1
+  },
+  {
+    "K NR": 77,
+    "Age": 74,
+    "Sex": "M",
+    "Height": 158,
+    "Weight (kg)": 84.0,
+    "BMI": 33.65,
+    "Left/Right": "L",
+    "KL-score": 1
+  },
+  {
+    "K NR": 78,
+    "Age": 64,
+    "Sex": "F",
+    "Height": 150,
+    "Weight (kg)": 76.0,
+    "BMI": 33.78,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 79,
+    "Age": 64,
+    "Sex": "F",
+    "Height": 165,
+    "Weight (kg)": 85.0,
+    "BMI": 31.22,
+    "Left/Right": "L",
+    "KL-score": 1
+  },
+  {
+    "K NR": 80,
+    "Age": 66,
+    "Sex": "M",
+    "Height": 169,
+    "Weight (kg)": 95.0,
+    "BMI": 33.26,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 81,
+    "Age": 63,
+    "Sex": "M",
+    "Height": 166,
+    "Weight (kg)": 75.5,
+    "BMI": 27.4,
+    "Left/Right": "L",
+    "KL-score": 2
+  },
+  {
+    "K NR": 83,
+    "Age": 66,
+    "Sex": "M",
+    "Height": 165,
+    "Weight (kg)": 76.0,
+    "BMI": 27.92,
+    "Left/Right": "L",
+    "KL-score": 1
+  },
+  {
+    "K NR": 84,
+    "Age": 74,
+    "Sex": "F",
+    "Height": 155,
+    "Weight (kg)": 95.0,
+    "BMI": 39.54,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 85,
+    "Age": 60,
+    "Sex": "F",
+    "Height": 173,
+    "Weight (kg)": 115.0,
+    "BMI": 38.42,
+    "Left/Right": "R",
+    "KL-score": 3
+  },
+  {
+    "K NR": 86,
+    "Age": 70,
+    "Sex": "M",
+    "Height": 170,
+    "Weight (kg)": 103.0,
+    "BMI": 35.64,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 87,
+    "Age": 65,
+    "Sex": "M",
+    "Height": 168,
+    "Weight (kg)": 94.5,
+    "BMI": 33.48,
+    "Left/Right": "L",
+    "KL-score": 2
+  },
+  {
+    "K NR": 88,
+    "Age": 69,
+    "Sex": "F",
+    "Height": 158,
+    "Weight (kg)": 82.0,
+    "BMI": 32.85,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 89,
+    "Age": 60,
+    "Sex": "F",
+    "Height": 145,
+    "Weight (kg)": 89.0,
+    "BMI": 42.33,
+    "Left/Right": "L",
+    "KL-score": 2
+  },
+  {
+    "K NR": 90,
+    "Age": 74,
+    "Sex": "M",
+    "Height": 165,
+    "Weight (kg)": 82.0,
+    "BMI": 30.12,
+    "Left/Right": "L",
+    "KL-score": 3
+  },
+  {
+    "K NR": 91,
+    "Age": 64,
+    "Sex": "F",
+    "Height": 168,
+    "Weight (kg)": 93.0,
+    "BMI": 32.95,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 92,
+    "Age": 74,
+    "Sex": "M",
+    "Height": 160,
+    "Weight (kg)": 113.0,
+    "BMI": 44.14,
+    "Left/Right": "R",
+    "KL-score": 2
+  },
+  {
+    "K NR": 93,
+    "Age": 62,
+    "Sex": "F",
+    "Height": 159,
+    "Weight (kg)": 107.0,
+    "BMI": 42.32,
+    "Left/Right": "L",
+    "KL-score": 3
+  }
+]

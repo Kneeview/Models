@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PY8Y2NJ04V"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PY8Y2NJ04V');
+        </script>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="description" content="MeshLabJS: the javascript mesh processing tool. Built using vcg library, emscripten and webgl. Developed by the Visual Computing Lab of ISTI - CNR and by the students of the FGT course.">
+        <title>Kneeview</title>
+        <link rel="icon" href="img/favicon.png" type="image/x-icon"/>             
+        <link rel="stylesheet" href="js/include/jquery-ui-1.11.4.custom/jquery-ui.min.css">
+        <link rel="stylesheet" href="js/include/jquery-ui-1.11.4.custom/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="js/include/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css">       
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/3b924a323a.js" crossorigin="anonymous"></script>
+
+        <script src="js/include/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>        
+        <script src="js/include/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+
+        <script src="js/include/colpick/js/colpick.js"></script>
+        <link rel="stylesheet" href="js/include/colpick/css/colpick.css">
+
+        <script src="js/include/three.min.js"></script>
+        <script src="js/include/stats.js"></script>
+        <script src="js/include/TrackballControls.js"></script>
+        
+        <script src="js/include/FileSaver/FileSaver.min.js"></script>
+        <script src="js/include/canvas-toBlob/canvas-toBlob.js"></script>
+
+        <script src="js/mlj/MLJ.js"></script>
+        
+        <script src="js/mlj/util/Util.js"></script>
+        
+        <script src="js/mlj/core/Core.js"></script>
+        <script src="js/mlj/core/Layer.js"></script>
+        <script src="js/mlj/core/Scene.js"></script>
+        <script src="js/mlj/core/File.js"></script>
+        
+        <script src="js/mlj/gui/Gui.js"></script>
+        <script src="js/mlj/gui/Param.js"></script>
+        <script src="js/mlj/gui/Component.js"></script>
+        <script src="js/mlj/gui/Widget.js"></script>
+        <script src="js/mlj/gui/SceneBar.js"></script>
+        <script src="js/mlj/gui/SearchTool.js"></script>
+        <script src="js/mlj/gui/LayersPane.js"></script>
+        <script src="js/mlj/gui/TabbedPane.js"></script>
+        <script src="js/mlj/gui/Log.js"></script>
+        <script src="js/mlj/gui/Logo.js"></script> 
+       
+        <script src="js/mlj/gui/Info.js"></script>                    
+
+        <script src="js/mlj/core/plugin/Plugin.js"></script>
+        <script src="js/mlj/core/plugin/Filter.js"></script>
+        <script src="js/mlj/core/plugin/BaseRendering.js"></script>
+        <script src="js/mlj/core/plugin/GlobalRendering.js"></script>
+        <script src="js/mlj/core/plugin/Rendering.js"></script>
+        <script src="js/mlj/core/plugin/Manager.js"></script>
+        
+        <script src="js/mlj/plugins/filters/Transform.js"></script> 
+        <script src="js/mlj/plugins/filters/Refine.js"></script>
+        <script src="js/mlj/plugins/filters/Selection.js"></script>
+        <script src="js/mlj/plugins/filters/Create.js"></script>
+        <script src="js/mlj/plugins/filters/FuncParser.js"></script>
+        <script src="js/mlj/plugins/filters/Sampling.js"></script>
+        <script src="js/mlj/plugins/filters/Meshing.js"></script>
+        <script src="js/mlj/plugins/filters/Measure.js"></script>
+        <script src="js/mlj/plugins/filters/Color.js"></script>
+        <script src="js/mlj/plugins/filters/Quality.js"></script>
+
+        <script src="js/mlj/plugins/rendering/Axes.js"></script> 
+        <script src="js/mlj/plugins/rendering/BackgroundGrid.js"></script> 
+        <script src="js/mlj/plugins/rendering/Global.js"></script> 
+        <script src="js/mlj/plugins/rendering/ColorWheel.js"></script> 
+        <script src="js/mlj/plugins/rendering/Box.js"></script> 
+        <script src="js/mlj/plugins/rendering/Points.js"></script> 
+        <script src="js/mlj/plugins/rendering/Wire.js"></script> 
+        <script src="js/mlj/plugins/rendering/Filled.js"></script>      
+        <script src="js/mlj/plugins/rendering/Selected.js"></script> 
+        <script src="js/mlj/plugins/rendering/Normals.js"></script> 
+        <script src="js/mlj/plugins/rendering/BoundaryEdges.js"></script>
+        <script src="js/mlj/plugins/rendering/Histogram.js"></script>
+        <script src="js/mlj/plugins/rendering/RadianceScaling.js"></script>
+        <script src="js/mlj/plugins/rendering/ScreenSpaceAmbientOcclusion.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script async src="js/generated/MeshLabCppCore.js"></script>
+
+        <script src="js/MeshLabJS.js"></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+        
+
+        <style>
+    
+        .custom-modal-dialog {
+            max-width: 50%; /* Adjust the percentage as needed */
+            margin: auto;
+        }
+    
+        .custom-modal-content {
+            width: 70%;
+        }
+    
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    
+        th, td {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 8px;
+            word-wrap: break-word; /* Ensure text wraps within cells */
+        }
+    
+        th {
+            background-color: #f2f2f2;
+        }
+    
+        a {
+            display: inline-block;
+            margin: 0 5px;
+        }
+   
+    
+
+          nav {
+            background-color: #E0E0E0;
+            overflow: hidden;
+            border-top: 1px solid blue;
+            border-bottom: 1px solid blue;
+      
+        }
+      
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+      
+        nav li {
+            float: left;
+        }
+      
+        nav li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border: #111;
+            border-width: 5;
+        }
+      
+        nav li a:hover {
+            background-color: #111;
+            color: #E0E0E0;
+        }
+      
+        .logo {
+            float: right;
+        
+        }
+      
+        .logo img {
+            height: 50%;
+            width: 50%;
+        }
+        
+      </style>
+    </head>
+    <body>    
+        <nav>
+          <ul>
+                <li>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#contributionsModal" >
+                        <i class="fas fa-hand-holding-heart"></i> Contributions
+                    </a>
+                </li>
+                <li>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#docModal" style="border-left: 1px solid blue;">
+                      <i class="fas fa-file-pdf"></i> Documentation   
+                  </a>                
+              </li>
+                <li>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#downloadsModal" style="border-right: 1px solid; border-left: 1px solid blue;">
+                        <i class="fas fa-download"></i> Downloads &nbsp&nbsp
+                    </a>
+                </li>
+                <li class="logo" style="margin: 0; margin-right: 10px; display: flex; align-items: center;">
+                    <img src="kneeview.png" alt="Logo" style="height: 40px; width: auto; display: block; margin-top: 4%;">
+                </li>
+            </ul>
+        </nav>
+      
+      
+      <!-- Contributions Modal -->
+      <div class="modal fade" id="contributionsModal" tabindex="-1" aria-labelledby="contributionsModalLabel" aria-hidden="true">
+          <div class="modal-dialog custom-modal-dialog">
+              <div class="modal-content custom-modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="contributionsModalLabel">Contributions</h5>
+                  </div>
+                  <div class="modal-body">
+                      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+                      <table>
+                          <tr>
+                              <th>Author</th>
+                              <th><i class="fas fa-home" title="Home"></i></th>
+                              <th><i class="fas fa-envelope" title="Email"></i></th>
+                              <th><i class="fa-brands fa-square-x-twitter"></i></th>
+                              <th><i class="fab fa-github" title="GitHub"></i></th>
+                              <th><i class="fas fa-graduation-cap" title="Google Scholar"></i></th>
+                              <th><i class="fab fa-orcid" title="ORCID"></i></th>
+                              <th><i class="fab fa-researchgate" title="ResearchGate"></i></th>
+                              <th><i class="fab fa-linkedin" title="LinkedIn"></i></th>
+                              <th>
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 599 260" width="20" height="20">
+                                      <g fill="none" fill-rule="evenodd">
+                                          <path fill="#000" d="M483 180.265V249h-26V60h26v14.735C495.302 64.002 511.392 57.5 529 57.5c38.66 0 70 31.34 70 70s-31.34 70-70 70c-17.608 0-33.698-6.502-46-17.235zm46-6.765c-25.957 0-47-21.043-47-47s21.043-47 47-47 47 21.043 47 47-21.043 47-47 47zM0 0h25v156c0 10.667 7.667 16 23 16 1.333 4.667 4.333 11.667 9 21H34c-21 0-34-21-34-37V0zm382 197.5c-38.66 0-70-31.34-70-70s31.34-70 70-70 70 31.34 70 70-31.34 70-70 70zm0-24c25.957 0 47-21.043 47-47s-21.043-47-47-47-47 21.043-47 47 21.043 47 47 47z"/>
+                                          <path fill="#DA2032" d="M178 194c-35.346 0-64-28.654-64-64 0-35.346 28.654-64 64-64 35.346 0 64 28.654 64 64 0 35.346-28.654 64-64 64zm0-22c27.062 0 49-21.938 49-49s-21.938-49-49-49-49 21.938-49 49 21.938 49 49 49z"/>
+                                          <path fill="#F7941E" d="M178 214c-46.392 0-84-37.608-84-84s37.608-84 84-84 84 37.608 84 84-37.608 84-84 84zm3.5-18c39.488 0 71.5-32.012 71.5-71.5S220.988 53 181.5 53 110 85.012 110 124.5s32.012 71.5 71.5 71.5z"/>
+                                          <path fill="#D5CD25" d="M178 236c-58.542 0-106-47.458-106-106S119.458 24 178 24s106 47.458 106 106-47.458 106-106 106zm4-21c49.706 0 90-40.294 90-90s-40.294-90-90-90-90 40.294-90 90 40.294 90 90 90z"/>
+                                          <path fill="#757600" d="M178 260c-71.797 0-130-58.203-130-130S106.203 0 178 0s130 58.203 130 130-58.203 130-130 130zm5.5-21c61.027 0 110.5-49.473 110.5-110.5S244.527 18 183.5 18 73 67.473 73 128.5 122.473 239 183.5 239z"/>
+                                      </g>
+                                  </svg>
+                              </th>
+                          </tr>
+                          <tr>
+                              <td>Renate Janssen <sup>1</sup></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                          </tr>
+                          <tr>
+                              <td>Sai Natarajan <sup>1</sup></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                          </tr>
+                          <tr>
+                              <td>Francis Chemorion <sup>1</sup></td>
+                              <td><a href="https://disc4all.upf.edu/bio/francis-chemorion/">X</a></td>
+                              <td><a href="mailto:francis.chemorion01@estudiant.upf.edu">X</a></td>
+                              <td><a href="https://twitter.com/fkchemorion">X</a></td>
+                              <td><a href="https://github.com/kchemorion">X</a></td>
+                              <td><a href="https://scholar.google.com/citations?user=upAnje8AAAAJ&hl=en">X</a></td>
+                              <td><a href="https://orcid.org/0000-0002-2099-0035">X</a></td>
+                              <td><a href="https://www.researchgate.net/profile/Francis-Chemorion">X</a></td>
+                              <td><a href="https://www.linkedin.com/in/francis-chemorion/">X</a></td>
+                              <td><a href="https://loop.frontiersin.org/people/2449392/publications">X</a></td>
+                          </tr>
+                          <tr>
+                              <td>Igor Radalov <sup>3</sup></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                          </tr>
+                          <tr>
+                              <td>Miguel A. González Ballester <sup>1,2</sup></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="#">X</a></td>
+                          </tr>
+                          <tr>
+                              <td>Jérôme Noaílly <sup>1</sup></td>
+                              <td><a href="https://www.upf.edu/web/etic/computational-biology-and-biomedical-systems/-/asset_publisher/MKlA53ZqmAS8/content/noailly-j%C3%A9r%C3%B4me-bernard/maximized">X</a></td>
+                              <td><a href="mailto:jerome.noailly@upf.edu">X</a></td>
+                              <td><a href="https://twitter.com/jeromenoailly">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="https://scholar.google.es/citations?user=YFvwxpwAAAAJ&hl=ca&oi=sra">X</a></td>
+                              <td><a href="https://orcid.org/0000-0003-3446-7621">X</a></td>
+                              <td><a href="https://www.researchgate.net/profile/Jerome-Noailly-2">X</a></td>
+                              <td><a href="https://www.linkedin.com/in/jnoailly/">X</a></td>
+                              <td><a href="https://loop.frontiersin.org/people/59318/publications">X</a></td>
+                          </tr>
+                      </table>
+                      <br>
+                      <p>1. Universitat Pompeu Fabra, Barcelona, Spain<br>
+                         2. ICREA, Barcelona, Spain<br>
+                         3. Department of Radiology, Hospital Del Mar, Barcelona, Spain
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <!-- API Modal -->
+      <div class="modal fade" id="docModal" tabindex="-1" aria-labelledby="docModalLabel" aria-hidden="true">
+        <div class="modal-dialog custom-modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="apiModalLabel">Abstract</h5>
+                </div>
+                <div class="modal-body">
+                  <p>Finite element modeling is pivotal for understanding knee biomechanics, but its potential is often constrained by data availability. While the osteoarthritis initiative (OAI) provides invaluable imaging data, researchers still face the bottleneck of converting these images into usable simulations. [1] Existing benchmarks like OpenKnee are valuable, but restricted by unstructured meshes and low subject count (n=8) [2]. To address this, we present Kneeview, a repository of 81 patient-specific bone geometries (.stls) of the Femur, Tibia, Patella and Fibula. We are further expanding this resource to include structured Abaqus meshes, generated by morphing a comprehensive template (bone and soft tissue) to each patient's unique bone anatomy, thereby ensuring topological consistency across a variable population.</p>
+
+                  <p>The dataset comprises of T2, fat saturated, knee MRI scans from 93 patients (38 male, 55 female) at Hospital Del Mar, Barcelona (2017-2024) using standard protocols. An nnUNet was trained on 35 expert annotations verified by a musculoskeletal-specialized radiologist. Removal of small island artifacts and exporting to .stl's was done using the built-in marching cubes of 3D Slicer. [3] In the final repository subjects with missing demographics were excluded and 81 final geometries were acquired. Structured mesh morphing will adjust the current available Bayesian Coherent Point Drift to contain object specific morphing for only bones while interpolating on the soft tissues, creating structured FEM meshes which will be added to the repository.</p>
+
+                  <p>The nnUNet achieved high segmentation accuracy on a hold-out test dataset of 15 volumes with an average Dice coefficient of 0.986 ± 0.001 and IOU of 0.971 ± 0.002. The average Hausdorff Distance (HD95) was 14.464 ± 12.727. This variance was driven exclusively by distal tibial artefacts Tibia HD85: 16.49 ± 14.22) while Femur, Patella and Fibula gave an average HD95 of 1.46 ± 0.242.</p>
+
+                  <p>Kneeview addresses the shortage of open-source simulation-ready knee geometries. The high Dice scores confirm that our automated pipeline produces geometries comparable to manual segmentation. Future work will include structured meshes for each of the 81 subjects such that this repository enables robust population-level finite element analysis.</p>
+
+                  <p><strong>Acknowledgements:</strong> This research study was co-funded by the European Union under a Horizon Europe MSCA Joint doctoral network with grant No.101169278, by the European Research Council (ERC-2021-CoG-O-Health-101044828), and by the Spanish Ministry of Science, Innovation, and Universities project STRATO - PID2021-126469OB-C21. Views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency (REA). Neither the European Union nor the REA can be held responsible for them.</p>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+  
+      
+  <!-- Downloads Modal -->
+  <div class="modal fade" id="downloadsModal" tabindex="-1" aria-labelledby="downloadsModalLabel" aria-hidden="true">
+      <div class="modal-dialog custom-modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="downloadsModalLabel">Downloads</h5>
+              </div>
+              <div class="modal-body">
+                  <div class="citation-box position-relative">
+                      <button class="copy-button btn btn-outline-secondary position-absolute" style="top: 0; right: 0;" id="copyButton">
+                          <i class="fa fa-copy"></i>
+                      </button>
+                      <pre id="citation-text" class="border p-3 text-wrap"> <br>
+                          Muñoz-Moya E, Rasouligandomani M, Ruiz Wills C, Chemorion FK, Piella G and Noailly J (2024) Unveiling interactions between intervertebral disc morphologies and mechanical behavior through personalized finite element modeling. Front. Bioeng. Biotechnol. 12:1384599. doi: 10.3389/fbioe.2024.1384599
+                      </pre>
+                  </div>
+                  
+                  <div class="citation-box position-relative mt-3">
+                      <button class="copy-button btn btn-outline-secondary position-absolute" style="top: 0; right: 0;" id="copyButton2">
+                          <i class="fa fa-copy"></i>
+                      </button>
+                      <pre id="citation-text2" class="border p-3 text-wrap"> <br>
+                          E. Muñoz-Moya, M. Rasouligandomani, C. Ruiz Wills, F. Chemorion, G. Piella, and J. Noailly, "Repository of IVD Patient-Specific FE Models," data set, Frontiers in Bioengineering and Biotechnology, vol. 12, Sep. 2023. [Online]. Available: https://doi.org/10.5281/zenodo.8325042
+                      </pre>
+                  </div>
+                  
+                  <div class="form-check agree-checkbox mt-3">
+                      <input type="checkbox" class="form-check-input" id="agreeCheckbox">
+                      <label class="form-check-label" for="agreeCheckbox">I agree to use the above citation when using this data.</label>
+                  </div>
+                  <button class="btn btn-primary mt-3" id="downloadButton" disabled>Complete .INP file download</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  
+  <script>
+      // Existing code for handling URL parameters and file operations
+      const urlParams = new URLSearchParams(window.location.search);
+      let filenamePrefix = urlParams.get('filenamePrefix') || 'K001';
+
+      // Define common suffixes for the filenames (knee components)
+      const suffixes = [
+          "_Femur.stl",
+          "_Tibia.stl",
+          "_Fibula.stl",
+          "_Patella.stl",
+      ];
+
+      // Map suffixes to colors (handled by ColorWheel.js)
+      const suffixColors = {
+          "_Femur.stl": "#FF4444",
+          "_Tibia.stl": "#4444FF",
+          "_Fibula.stl": "#44FF44",
+          "_Patella.stl": "#FFAA00",
+      };
+  
+      // Generate filenames based on the prefix and common suffixes
+      const filenames = suffixes.map(suffix => `${filenamePrefix}${suffix}`);
+      
+      function openFiles() {
+          filenames.forEach((filename) => {
+              MLJ.core.File.openMeshFileFromUrl(filename);
+          });
+      }
+  
+      // Custom function to apply color to a mesh
+      function applyColorToMesh(mesh, colorHex) {
+          // Check if the mesh and its material are valid
+          if (mesh && mesh.material) {
+              mesh.material.color = new THREE.Color(colorHex);
+              mesh.material.needsUpdate = true;
+          } else {
+              // console.error("Mesh or material not found for color application.");
+          }
+      }
+  
+      // Default camera position
+      const defaultCameraPosition = {
+          "camera": {
+              "x": 15.38905714888449,
+              "y": 16.044783708746664,
+              "z": 0.4027309793541718
+          },
+          "fov": 45,
+          "up": {
+              "x": 0.05027507266820939,
+              "y": -0.0732216308612105,
+              "z": 0.9960476945619765
+          },
+          "target": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+          }
+      };
+
+      // Counter to track loaded files
+      let loadedFilesCount = 0;
+      const totalFiles = filenames.length;
+
+      // Modified event handler
+      $(document).on("MeshFileOpened", function (event, meshFile) {
+          const filename = meshFile.fileName;
+          const suffix = filename.substring(filename.lastIndexOf('_'));
+          const color = suffixColors[suffix] || "defaultColor";
+
+          // Apply color to the mesh
+          applyColorToMesh(meshFile.threeMesh, color);
+
+          // Increment loaded files counter
+          loadedFilesCount++;
+
+          // When all files are loaded, set the camera position
+          if (loadedFilesCount === totalFiles) {
+              setTimeout(function() {
+                  MLJ.core.Scene.setCameraPositionJSON(JSON.stringify(defaultCameraPosition));
+                  console.log("Camera position set to default view");
+              }, 100); // Small delay to ensure all rendering is complete
+          }
+
+          // Re-render the scene to reflect color changes
+          MLJ.core.Scene.render();
+      });
+
+      MLJ.core.plugin.Manager.run();
+      MLJ.gui.makeGUI("");
+      Module['onRuntimeInitialized'] = function() {
+          openFiles();
+      };
+  
+      // New code for handling modal functionalities
+  
+      // Function to copy text to clipboard
+      function copyCitation(elementId) {
+          const citationText = document.getElementById(elementId).innerText;
+          const textarea = document.createElement('textarea');
+          textarea.value = citationText;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+  
+          // Optional: Show a confirmation message
+          alert('Citation copied to clipboard');
+      }
+  
+      // Function to toggle download button state
+      function toggleDownloadButton() {
+          const checkbox = document.getElementById('agreeCheckbox');
+          const downloadButton = document.getElementById('downloadButton');
+          downloadButton.disabled = !checkbox.checked;
+  
+          // Dynamically set the href attribute based on checkbox state
+          if (checkbox.checked) {
+              downloadButton.onclick = function() {
+                  window.location.href = 'https://zenodo.org/records/8325042';
+              };
+          } else {
+              downloadButton.onclick = null;
+          }
+      }
+  
+      // Event listener for the checkbox to toggle download button state
+      document.getElementById('agreeCheckbox').addEventListener('change', toggleDownloadButton);
+  
+      // Initialize download button state
+      toggleDownloadButton();
+  
+      // Event listener for the copy buttons to copy text
+      document.getElementById('copyButton').addEventListener('click', function() {
+          copyCitation('citation-text');
+      });
+      document.getElementById('copyButton2').addEventListener('click', function() {
+          copyCitation('citation-text2');
+      });
+  
+  </script>
+  
+      
+    
+          
+      </body>
+  
+  
+  </html>
+  

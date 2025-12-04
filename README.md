@@ -72,7 +72,9 @@ Future developments include:
 If you use this dataset in your research, please cite:
 
 ```
-[Citation to be added - placeholder for Kneeview publication]
+R. Janssen, S. Natarajan, F. Chemorion, I. Radalov, M. A. G. Ballester, and J. Noaílly,
+"Kneeview: An open-source repository of patient-specific knee geometries and structured meshes,"
+Zenodo, 2024. DOI: 10.5281/zenodo.17805176.
 ```
 
 ## Acknowledgements

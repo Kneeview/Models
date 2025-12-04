@@ -357,24 +357,15 @@
                           <i class="fa fa-copy"></i>
                       </button>
                       <pre id="citation-text" class="border p-3 text-wrap"> <br>
-                          Muñoz-Moya E, Rasouligandomani M, Ruiz Wills C, Chemorion FK, Piella G and Noailly J (2024) Unveiling interactions between intervertebral disc morphologies and mechanical behavior through personalized finite element modeling. Front. Bioeng. Biotechnol. 12:1384599. doi: 10.3389/fbioe.2024.1384599
+                          R. Janssen, S. Natarajan, F. Chemorion, I. Radalov, M. A. G. Ballester, and J. Noaílly, "Kneeview: An open-source repository of patient-specific knee geometries and structured meshes," Zenodo, 2024. DOI: 10.5281/zenodo.17805176.
                       </pre>
                   </div>
-                  
-                  <div class="citation-box position-relative mt-3">
-                      <button class="copy-button btn btn-outline-secondary position-absolute" style="top: 0; right: 0;" id="copyButton2">
-                          <i class="fa fa-copy"></i>
-                      </button>
-                      <pre id="citation-text2" class="border p-3 text-wrap"> <br>
-                          E. Muñoz-Moya, M. Rasouligandomani, C. Ruiz Wills, F. Chemorion, G. Piella, and J. Noailly, "Repository of IVD Patient-Specific FE Models," data set, Frontiers in Bioengineering and Biotechnology, vol. 12, Sep. 2023. [Online]. Available: https://doi.org/10.5281/zenodo.8325042
-                      </pre>
-                  </div>
-                  
+
                   <div class="form-check agree-checkbox mt-3">
                       <input type="checkbox" class="form-check-input" id="agreeCheckbox">
                       <label class="form-check-label" for="agreeCheckbox">I agree to use the above citation when using this data.</label>
                   </div>
-                  <button class="btn btn-primary mt-3" id="downloadButton" disabled>Complete .INP file download</button>
+                  <button class="btn btn-primary mt-3" id="downloadButton" disabled>Complete .STL file download</button>
               </div>
           </div>
       </div>
@@ -501,7 +492,7 @@
           // Dynamically set the href attribute based on checkbox state
           if (checkbox.checked) {
               downloadButton.onclick = function() {
-                  window.location.href = 'https://zenodo.org/records/8325042';
+                  window.location.href = 'https://zenodo.org/records/17805176';
               };
           } else {
               downloadButton.onclick = null;
@@ -514,12 +505,9 @@
       // Initialize download button state
       toggleDownloadButton();
   
-      // Event listener for the copy buttons to copy text
+      // Event listener for the copy button to copy text
       document.getElementById('copyButton').addEventListener('click', function() {
           copyCitation('citation-text');
-      });
-      document.getElementById('copyButton2').addEventListener('click', function() {
-          copyCitation('citation-text2');
       });
   
   </script>

@@ -124,4 +124,4 @@ For issues, bugs, or feature requests, please file an issue in the GitHub reposi
 
 ---
 
-*Developed by the Computational Biology and Biomedical Systems group at Universitat Pompeu Fabra*
+*Developed by the Biomechanics and Mechanobiology group at Universitat Pompeu Fabra*
